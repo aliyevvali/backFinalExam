@@ -1,0 +1,37 @@
+﻿@model Team
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="input-group mb-3">
+        <label asp-for="FullName" for="inputGroupFile01">Upload</label>
+        <input type="file" class="form-control" id="inputGroupFile01">
+        <span asp-validation-for="FullName"></span>
+    </div>
+    <div class="input-group mb-3">
+        <label asp-for="Posission">Posission</label>
+        <input asp-for="Posission" class="form-control">
+        <span asp-validation-for="Posission"></span>
+    </div>
+    <div class="input-group mb-3">
+        <label asp-for="FeedBack">FeedBack</label>
+        <input asp-for="FeedBack" class="form-control">
+        <span asp-validation-for="FeedBack"></span>
+    </div>
+    <div class="input-group mb-3">
+        <label asp-for="SocialIcon">SocialIcon</label>
+        <input asp-for="SocialIcon" class="form-control">
+        <span asp-validation-for="SocialIcon"></span>
+    </div>
+    <div class="input-group mb-3">
+        <label asp-for="Photo">Photo</label>
+        <input asp-for="Photo" class="form-control">
+        <span asp-validation-for="Photo"></span>
+    </div>
+    <div asp-validation-summary="ModelOnly"></div>
+    <button type="submit" class="btn btn-warning">Edit</button>
+    <a asp-action="Index" asp-controller="Team">Go Back</a>
+
+</form>
+
